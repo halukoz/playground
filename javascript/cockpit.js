@@ -169,6 +169,8 @@ export default plugin
 
 
 const MobileNotifications = ({box, apis = null, vehicle = null, refresh = null, paddingTop = 25, paddingHorizontal = 12, backgroundColor = null}) => {
+    
+    let allMessages = "";
     const container = document.createElement("div")
     container.setAttribute("style", `height: 100%; width: 100%;`)
     container.innerHTML = (`
@@ -185,11 +187,15 @@ const MobileNotifications = ({box, apis = null, vehicle = null, refresh = null, 
         }
 		</style>
     <div style="max-width: fit-content; margin: 0 auto; position: relative;">
-    <img src="https://firebasestorage.googleapis.com/v0/b/digital-auto.appspot.com/o/media%2FDashboardPhone.png?alt=media&token=d361018a-b4b3-42c0-8ef0-16c9e70fd9c7" style="height: 100%; width: 100%; object-fit: contain;">
-        <div class="smartphone-text" style="position: absolute; color: white; font-family: 'Lato'; width: 100%; top: 0; height: 100%; box-sizing: border-box; padding-top: ${paddingTop}px; padding-right: ${paddingHorizontal}px; padding-left: ${paddingHorizontal}px; padding-bottom: 25px; white-space: break-spaces;"></div>
+    <img src="https://firebasestorage.googleapis.com/v0/b/digital-auto.appspot.com/o/media%2FDashboardPhone.png?alt=media&token=d361018a-b4b3-42c0-8ef0-16c9e70fd9c7" style="height: 95%; width: 100%; object-fit: contain;">
+        <div class="smartphone-text" style="position: absolute; color: white; font-family: 'Lato'; width: 100%; top: 0; height: 95%; box-sizing: border-box; padding-top: ${paddingTop}px; padding-right: ${paddingHorizontal}px; padding-left: ${paddingHorizontal}px; padding-bottom: 25px; white-space: break-spaces;"></div>
     </div>
+    <img id="dog-photo" src="https://media.digitalauto.tech/data/images/533e2ea3-b1c2-41ca-ab02-b87b95d53aebdog.jpg" width="100" height="100" style="position: relative; top: -250px; visibility: hidden"></img>
+    <button id="photo-btn" style="position: relative; top: -150px">Take Photo</button>
     `)
     box.injectNode(container)
+
+    container.querySelector("#photo-btn").addEventListener("click", function(){ container.querySelector("#dog-photo").style.visibility = 'visible' });
 
     const updateNotification = async () => {
         if(apis !== null || apis !== undefined) {
@@ -214,11 +220,9 @@ const MobileNotifications = ({box, apis = null, vehicle = null, refresh = null, 
     return {
         printNotification: (message) => {
 
-            console.log("PRINT !!!!!")
-            console.log(message)
-
             if(message !== undefined || message !== "") {
-                container.querySelector(".smartphone-text").textContent = message
+                allMessages += message + "\n";
+                container.querySelector(".smartphone-text").textContent = allMessages
             }            
         }
     }
