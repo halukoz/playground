@@ -192,10 +192,21 @@ const MobileNotifications = ({box, apis = null, vehicle = null, refresh = null, 
     </div>
     <img id="dog-photo" src="https://media.digitalauto.tech/data/images/533e2ea3-b1c2-41ca-ab02-b87b95d53aebdog.jpg" width="100" height="100" style="position: relative; top: -250px; visibility: hidden"></img>
     <button id="photo-btn" style="position: relative; top: -150px">Take Photo</button>
+    <input type="text" id="message" onkeydown="search(this)" style="position: relative; top: -150px" name="message">
     `)
     box.injectNode(container)
 
     container.querySelector("#photo-btn").addEventListener("click", function(){ container.querySelector("#dog-photo").style.visibility = 'visible' });
+    container.querySelector("#message").addEventListener("keypress", updateValue);
+
+    function updateValue(e) {
+        if (e.key === 'Enter') {
+            allMessages += e.target.value + "\n";
+            container.querySelector(".smartphone-text").textContent = allMessages;
+            container.querySelector("#message").value = '';
+        }
+
+    }
 
     const updateNotification = async () => {
         if(apis !== null || apis !== undefined) {
