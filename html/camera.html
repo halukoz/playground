@@ -1,0 +1,42 @@
+<html>
+    <script>
+
+
+function openNav(value) {
+
+    if (value === "happy") {
+        document.getElementById("happydogframe").src = "https://media.digitalauto.tech/data/images/0f4a25a6-09b0-4e88-bbca-d72032e83c58caml.gif"
+
+    } else {
+        document.getElementById("happydogframe").src = "https://media.digitalauto.tech/data/images/e8382e72-3c86-441a-9dc7-c5d109ecff3cwild.gif"
+
+    }
+    
+ }
+
+</script>
+
+
+<div id="content" style="background: black; color: white; height: 100%" >
+  <div id="left">
+    
+    <iframe id="happydogframe" width="70%" height="70%" src="https://media.digitalauto.tech/data/images/0f4a25a6-09b0-4e88-bbca-d72032e83c58caml.gif"></iframe>
+
+  <img src="https://media.digitalauto.tech/data/images/0f4a25a6-09b0-4e88-bbca-d72032e83c58caml.gif"  width="70%" height="70%" alt="gif"/>
+  
+  </div>
+
+ <form id="dog-mode-radio-buttons">
+  <legend>Dog Mode</legend>
+
+  <input type="radio" id="happy" name="dog-videos-buttons" value="app" checked />
+  <label for="happy">happy</label>
+  <input type="radio" id="sad" name="dog-videos-buttons" value="pull" />
+  <label for="sad">sad</label> 
+  <input type="radio" id="nodog" name="dog-videos-buttons" value="no" />
+  <label for="nodog">no dog</label>
+ </form>
+
+</div>
+
+</html>
