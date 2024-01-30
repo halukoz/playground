@@ -1,0 +1,55 @@
+<html>
+
+
+<head>
+<style>
+#dog-mode-radio-buttons {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+}
+</style>
+</head>
+<script>
+
+
+function openNav(value) {
+
+    if (value === "happy") {
+        document.getElementById("happydogframe").src = "https://firebasestorage.googleapis.com/v0/b/digital-auto.appspot.com/o/media%2Fcalm.gif?alt=media&token=7c01a791-1be9-402b-8609-094ed3ee88e1"
+
+    } else {
+        document.getElementById("happydogframe").src = "https://firebasestorage.googleapis.com/v0/b/digital-auto.appspot.com/o/media%2Fwild.gif?alt=media&token=ac5dbeaf-6fb4-4efb-a4b8-817c18bc9662"
+
+    }
+    
+ }
+
+</script>
+
+
+<div id="content" style="background: black; color: white; height: 100%; width: 100%;" >
+  <div>
+    
+  <img id="happydogframe" src="https://media.digitalauto.tech/data/images/0d7f20bd-087a-4163-afe9-efcda5f23a11nodog-im-auto.jpg"  width="100%" height="80%" alt="gif"/>
+  
+  </div>
+
+ <form id="dog-mode-radio-buttons">
+  <legend id="dog-mode">Dog Mood</legend>
+
+  <input type="radio" id="happy" name="dog-videos-buttons" value="app" />
+  <label for="happy">calm</label>
+  <input type="radio" id="sad" name="dog-videos-buttons" value="pull" />
+  <label for="sad">excited</label> 
+  <input type="radio" id="nodog" name="dog-videos-buttons" value="no" checked />
+  <label for="nodog">no dog</label>
+ </form>
+
+</div>
+
+</html>
+
+
+
+

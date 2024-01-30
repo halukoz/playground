@@ -1,0 +1,132 @@
+.responsive {
+    width: 100%;
+    height: auto;
+  }
+  
+  #car-window-image {
+      z-index: 0;
+  }
+  
+  .container {
+    clear: both;
+    position: absolute;
+    margin-top: -70%;
+    z-index: 100;
+  }
+  
+  .container .arrow {
+    width: 12px;
+    height: 20px;
+    overflow: hidden;
+    position: relative;
+    float: left;
+    margin-left: 60px;
+    top: 6px;
+    right: -1px;
+  }
+  
+  .container .arrow .outer {
+    width: 0;
+    height: 0;
+    border-right: 20px solid #000000;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .container .arrow .inner {
+    width: 0;
+    height: 0;
+    border-right: 20px solid #ffffff;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    top: 0;
+    left: 2px;
+  }
+  
+  .container .message-body {
+    float: left;
+    width: 130px;
+    height: auto;
+    border: 1px solid #CCC;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    padding: 6px 8px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+  }
+  
+  .container .message-body p {
+    margin: 0;
+  }
+  
+  #car-window-text {
+      visibility: hidden;
+  }
+  
+  
+  .box {
+    width: 80px;
+    height: 40px;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    position: absolute;
+    margin-top: -85%;
+    margin-left: 30%;
+    float: left;
+    z-index: 1000;
+  }
+  
+  .box.arrow-top {
+    margin-top: 40px;
+  }
+  
+  .box.arrow-top:after {
+    content: " ";
+    position: absolute;
+    right: 30px;
+    top: -15px;
+    border-top: none;
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    border-bottom: 15px solid white;
+  }
+  
+  .box.arrow-right:after {
+    content: " ";
+    position: absolute;
+    right: -15px;
+    top: 15px;
+    border-top: 15px solid transparent;
+    border-right: none;
+    border-left: 15px solid white;
+    border-bottom: 15px solid transparent;
+  }
+  
+  .box.arrow-bottom:after {
+    content: " ";
+    position: absolute;
+    right: 30px;
+    bottom: -15px;
+    border-top: 15px solid white;
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    border-bottom: none;
+  }
+  
+  .box.arrow-left:after {
+    content: " ";
+    position: absolute;
+    left: -15px;
+    top: 15px;
+    border-top: 15px solid transparent;
+    border-right: 15px solid white;
+    border-left: none;
+    border-bottom: 15px solid transparent;
+  }

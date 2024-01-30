@@ -1,0 +1,67 @@
+.responsive {
+    width: 100%;
+    height: auto;
+  }
+  
+  .above-image {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 30%;
+    height: 30%;
+    margin-top: 40%;
+    margin-left: 7%;
+    z-index: 0;
+  }
+  
+  #radio-img {
+      z-index: 2;
+  }
+  
+  #klimaText {
+    font-weight: bold;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    color: white;
+    z-index: 100;
+  }
+  
+  h2{
+      text-align: center;
+      margin-top: 35%;
+      margin-left: 25%;
+      font-size: 20px;
+      background-color: black;
+      position: absolute;
+      animation: h2 10s linear 2s infinite alternate;
+  }
+  
+  @keyframes h2 {
+    0%   {h2; left:0px; top:0px;}
+    25%  {h2; left:30px; top:0px;}
+    50%  {h2; left:-30px; top:0px;}
+    100% {h2; left:0px; top:0px;}
+  }
+  
+  h2:hover{
+      color: #FF0000;
+  }
+  
+  #crop {
+      overflow: hidden;
+  
+      position: absolute;
+      left: 100px;
+      top: 100px;
+  
+      width: 450px;
+      height: 150px;
+  }
+  
+  #overlay {
+      -webkit-filter:blur(4px);
+      filter:blur(4px);
+  
+      width: 450px;
+  }
+  
